@@ -76,7 +76,3 @@ Feel free to contribute by submitting pull requests for bug fixes or enhancement
 ## Resources  
 - [SwiftUI Essentials - Apple Tutorial](https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions)  
 - [SwiftUI Documentation](https://developer.apple.com/documentation/swiftui/)  
-
-----
-
-This README aligns with the tutorial's scope while being informative for potential contributors or learners. Let me know if you’d like additional changes!
