@@ -7,6 +7,19 @@ A view displaying information about a hike, including an elevation graph.
 
 import SwiftUI
 
+/***
+ Extract the transition as a static property of AnyTransition, and access the new property in the view’s transition modifier.
+ */
+
+extension AnyTransition {
+    static var moveAndFade: AnyTransition {
+        .asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .scale.combined(with: .opacity)
+        )
+    }
+}
+
 struct HikeView: View {
     var hike: Hike
     @State private var showDetail = false
@@ -26,7 +39,8 @@ struct HikeView: View {
                 Spacer()
 
                 Button {
-                    withAnimation(.easeInOut(duration: 4)){
+                    withAnimation{
+                        //showDetail = true <- this make it true permantly for the instace which does not make it possible to make it false when clicked agian
                         showDetail.toggle()
                     }
                 } label: {
@@ -41,6 +55,7 @@ struct HikeView: View {
 
             if showDetail {
                 HikeDetail(hike: hike)
+                    .transition(.moveAndFade)
             }
         }
     }
