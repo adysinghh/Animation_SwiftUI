@@ -46,7 +46,7 @@ Combine animations to create ripple effects when visualizing graphs:
 
 1. **Clone the repository:**  
    ```bash  
-   git clone 
+   git clone https://github.com/adysinghh/Animation_SwiftUI.git
    cd SwiftUI_Animations  
    ```  
 2. **Open the project in Xcode:**  
